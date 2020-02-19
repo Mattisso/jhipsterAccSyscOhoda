@@ -1,0 +1,27 @@
+{
+  "jhipsterAccSyscOhodaApp": {
+    "nstBalanceInput": {
+      "home": {
+        "title": "Nst Balance Inputs",
+        "createLabel": "Create a new Nst Balance Input",
+        "createOrEditLabel": "Create or edit a Nst Balance Input",
+        "search": "Search for Nst Balance Input",
+        "notFound": "No Nst Balance Inputs found"
+      },
+      "created": "A new Nst Balance Input is created with identifier {{ param }}",
+      "updated": "A Nst Balance Input is updated with identifier {{ param }}",
+      "deleted": "A Nst Balance Input is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Nst Balance Input {{ id }}?"
+      },
+      "detail": {
+        "title": "Nst Balance Input"
+      },
+      "numCompte": "Num Compte",
+      "intitulCompte": "Intitul Compte",
+      "soldeDebit": "Solde Debit",
+      "soldeCredit": "Solde Credit",
+      "compteNumber": "Compte Number"
+    }
+  }
+}
