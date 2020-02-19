@@ -1,0 +1,46 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="nstBalanceInput">
+            <h2><span jhiTranslate="jhipsterAccSyscOhodaApp.nstBalanceInput.detail.title">Nst Balance Input</span> {{ nstBalanceInput.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipsterAccSyscOhodaApp.nstBalanceInput.numCompte">Num Compte</span></dt>
+                <dd>
+                    <span>{{ nstBalanceInput.numCompte }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterAccSyscOhodaApp.nstBalanceInput.intitulCompte">Intitul Compte</span></dt>
+                <dd>
+                    <span>{{ nstBalanceInput.intitulCompte }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterAccSyscOhodaApp.nstBalanceInput.soldeDebit">Solde Debit</span></dt>
+                <dd>
+                    <span>{{ nstBalanceInput.soldeDebit }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterAccSyscOhodaApp.nstBalanceInput.soldeCredit">Solde Credit</span></dt>
+                <dd>
+                    <span>{{ nstBalanceInput.soldeCredit }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterAccSyscOhodaApp.nstBalanceInput.compteNumber">Compte Number</span></dt>
+                <dd>
+                    <span>{{ nstBalanceInput.compteNumber }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/nst-balance-input', nstBalanceInput.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

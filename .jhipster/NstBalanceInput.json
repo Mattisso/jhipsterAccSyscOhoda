@@ -1,0 +1,42 @@
+{
+    "name": "NstBalanceInput",
+    "fields": [
+        {
+            "fieldName": "numCompte",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "intitulCompte",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "soldeDebit",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "soldeCredit",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "compteNumber",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20200219132000",
+    "entityTableName": "nst_balance_input",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

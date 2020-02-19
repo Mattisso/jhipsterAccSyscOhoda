@@ -1,0 +1,14 @@
+
+entity NstBalanceInput {
+	numCompte  String required,
+	intitulCompte String required,
+	soldeDebit Long,
+	soldeCredit Long 
+	compteNumber String
+}
+
+// Set pagination options
+
+paginate NstBalanceInput  with pagination
+
+service all with serviceClass
