@@ -1,0 +1,16 @@
+version: '2'
+services:
+  jhipsteraccsyscohoda-mongodb:
+    image: mongo:4.0.16
+    ports:
+      - '27017:27017'
+    command: mongos --configdb jhipsteraccsyscohoda-mongodb-config
+  jhipsteraccsyscohoda-mongodb-node:
+    build:
+      context: .
+      dockerfile: mongodb/MongoDB.Dockerfile
+    command: mongod --replSet rs1 --noprealloc --smallfiles
+  jhipsteraccsyscohoda-mongodb-config:
+    image: mongo:4.0.16
+    container_name: jhipsteraccsyscohoda-mongodb-config
+    command: mongod --noprealloc --smallfiles --configsvr --dbpath /data/db
