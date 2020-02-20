@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, Renderer, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, AfterViewInit, Renderer2, ElementRef, ViewChild } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 
@@ -28,7 +28,7 @@ export class PasswordResetFinishComponent implements OnInit, AfterViewInit {
     private passwordResetFinishService: PasswordResetFinishService,
     private loginModalService: LoginModalService,
     private route: ActivatedRoute,
-    private renderer: Renderer,
+    private renderer: Renderer2,
     private fb: FormBuilder
   ) {}
 
@@ -43,7 +43,8 @@ export class PasswordResetFinishComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     if (this.newPassword) {
-      this.renderer.invokeElementMethod(this.newPassword.nativeElement, 'focus', []);
+      this.renderer.selectRootElement(this.newPassword.nativeElement).focus();
+      // (this.newPassword.nativeElement.select());
     }
   }
 

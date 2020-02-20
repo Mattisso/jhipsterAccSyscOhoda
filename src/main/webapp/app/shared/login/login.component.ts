@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, Renderer, ElementRef, ViewChild } from '@angular/core';
+import { Component, AfterViewInit, Renderer2, ElementRef, ViewChild } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
@@ -23,7 +23,7 @@ export class LoginModalComponent implements AfterViewInit {
 
   constructor(
     private loginService: LoginService,
-    private renderer: Renderer,
+    private renderer: Renderer2,
     private router: Router,
     public activeModal: NgbActiveModal,
     private fb: FormBuilder
@@ -31,7 +31,7 @@ export class LoginModalComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     if (this.username) {
-      this.renderer.invokeElementMethod(this.username.nativeElement, 'focus', []);
+      this.renderer.selectRootElement(this.username.nativeElement).focus();
     }
   }
 
